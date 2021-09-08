@@ -70,6 +70,7 @@ class Logger:
         self._logs = []
         self._responses = []
         self._orders = []
+        self._path = "Logs/"
 
     def log_order_response(self, order, response):
         log = json.dumps(order.order_payload) + "\n" + response.text
@@ -85,7 +86,7 @@ class Logger:
         pass
 
     def save_logs(self):
-        file = open(f"Logs/{self._date}.txt", "w")
+        file = open(f"{self._path}{self._date}.txt", "w")
         try:
             for log in self._logs:
                 file.write(log)

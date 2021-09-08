@@ -1,1 +1,7 @@
-*.config
+App.config
+firefox_driver.py
+Logs
+!Example Log.txt
+!requirements.txt
+*.txt
+build
